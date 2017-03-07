@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    div.row
+        div.col-sm-6.col-sm-offset-3
+            form(method='POST', action='/login')
+                input(type='text', name='username')
+                input(type='password', name='password')
+                input(type='submit', value='login')

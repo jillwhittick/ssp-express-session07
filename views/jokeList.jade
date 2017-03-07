@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    div.row
+      div.col-sm-12
+        h1 Just Joking
+    div.row
+      div.col-sm-2.col-sm-offset-10
+        a(href='/admin/createJoke') Create a new joke
+    div.row
+      div.col-sm-12
+        for joke, i in jokes
+          div.row
+            div.col-sm-8.col-sm-offset-2
+              p #{joke.joke}
+          div.row
+            div.col-sm-1.col-sm-offset-2
+              a(href='/admin/delete/#{joke.id}') Delete
